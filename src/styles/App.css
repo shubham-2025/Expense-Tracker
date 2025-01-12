@@ -1,0 +1,245 @@
+/* General App Style */
+.app {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f9fc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.app:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #6a1b9a, #3f51b5);
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+  transform: scale(1.03); /* Slight zoom effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Enhanced shadow */
+}
+
+.navbar h1 {
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-actions button,
+.nav-actions .menu-button {
+  background: linear-gradient(45deg, #ff4081, #3f51b5);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.nav-actions button:hover,
+.nav-actions .menu-button:hover {
+  background: linear-gradient(45deg, #3f51b5, #ff4081); /* Reverse Gradient */
+  transform: scale(1.05);
+}
+
+/* App Grid for uniform components */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+  align-items: stretch; /* Ensure equal height of all grid items */
+}
+
+.app-grid > *:hover {
+  transform: scale(1.03); /* Slight zoom effect for all items */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Consistent shadow on hover */
+}
+
+/* Responsive Design for App Grid */
+@media (max-width: 768px) {
+  .app-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .navbar h1 {
+    font-size: 22px;
+  }
+}
+
+/* Summary and Budget Tables */
+.summary-table, .budget-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.summary-table:hover,
+.budget-table:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.summary-table th, .budget-table th {
+  background: linear-gradient(45deg, #ff4081, #3f51b5);
+  color: white;
+  padding: 12px;
+  text-align: left;
+  border-radius: 8px;
+}
+
+.summary-table td, .budget-table td {
+  background-color: #fff;
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.summary-table tr:nth-child(even), .budget-table tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+/* Expense Summary */
+.expense-summary {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(238, 16, 16, 0.94); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expense-summary:hover {
+  transform: scale(1.03); /* Slight zoom effect */
+  box-shadow: 0 4px 8px rgba(238, 16, 16, 0.94);
+}
+
+.expense-summary h2 {
+  font-size: 24px;
+  color: black;
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+
+/* Buttons */
+button {
+  background-color: #00bcd4; /* Cyan */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #008c9e; /* Darker Cyan */
+  transform: scale(1.05);
+}
+
+/* Expense List */
+.expense-item {
+  background-color: #fff;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.expense-item:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.03);
+}
+
+/* Warning Popup */
+.warning-popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffcc00;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: black;
+  font-weight: bold;
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.warning-popup:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Enhanced shadow */
+}
+
+.warning-popup .warning-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.warning-popup input {
+  width: 80%;
+  margin-top: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.danger-symbol {
+  font-size: 30px;
+  color: #ff0000;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(45deg, #6a1b9a, #3f51b5);
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensure it spans the full width of the viewport */
+  position: relative; /* Remove 'fixed' positioning */
+}
+
+.footer:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Enhanced shadow */
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 15px;
+    font-size: 0.8rem;
+  }
+}
