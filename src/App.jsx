@@ -9,6 +9,7 @@ import HamburgerMenu from "./components/HamburgerMenu";
 import "./styles/App.css";
 import { BiBold } from "react-icons/bi";
 import { fontString } from "chart.js/helpers";
+import CollapsibleMenu from "./components/CollapsibleMenu";
 
 const App = () => {
   const [expenses, setExpenses] = useState(() => {
@@ -121,13 +122,13 @@ const App = () => {
         <p>© {new Date().getFullYear()} Expense Tracker. All rights reserved.</p>
       </footer>
 
-      /*{/* Hamburger Menu */}
+    {/* Hamburger Menu */}
       <HamburgerMenu
         budget={budget}
         setBudget={setBudget}
         date={selectedDate}
         setDate={handleDateChange}
-      />*/
+      />
     </div>
   );
 };
